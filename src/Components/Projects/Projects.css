@@ -43,7 +43,7 @@ h3 {
   margin-top: 2rem;
 }
 
-@media screen and(max-width: 790px) {
+@media screen and (max-width: 790px) {
   .list {
     padding: 0.8rem 1.5rem;
   }

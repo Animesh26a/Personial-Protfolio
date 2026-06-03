@@ -42,7 +42,7 @@ p {
   border-color: var(--text-secondary-clr);
   background: transparent;
 }
-@media screen and(max-width: 790px) {
+@media screen and (max-width: 790px) {
   .hero-image {
     height: 100%;
   }
