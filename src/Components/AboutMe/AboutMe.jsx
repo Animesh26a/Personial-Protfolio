@@ -15,7 +15,7 @@ const AboutMe = () => {
             About Me
           </span>
           <h2>
-            Who is <span className="green-text">QJ Animesh?</span>
+            Who is <span className="green-text">AG Animesh?</span>
           </h2>
           <p className="para">
             a web developer passionate about clean code, modern design, user

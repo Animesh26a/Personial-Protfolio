@@ -1,4 +1,4 @@
-.middle::before {
+/* .middle::before {
   left: 50%;
   transform: translateX(-50%);
 }
@@ -9,4 +9,76 @@
 }
 .p-bottom-1 {
   padding-bottom: 1rem;
+} */
+
+.middle::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.green-inverse {
+  background: var(--accent-clr);
+  color: var(--fix-clr);
+  border: 0.1rem solid var(--accent-clr);
+}
+
+.p-bottom-1 {
+  padding-bottom: 1rem;
+}
+
+/* =========================================
+   Responsive Media Queries
+========================================= */
+
+/* --- Tablet & Small Laptop (Max-width: 992px) --- */
+@media screen and (max-width: 992px) {
+  .gap-5 {
+    gap: 3rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+}
+
+/* --- Standard Mobile (Max-width: 768px) --- */
+@media screen and (max-width: 768px) {
+  .flex.gap-5 {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .card {
+    flex-basis: auto;
+    width: 100%;
+    padding: 1.5rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .flex.between {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    .list {
+      align-self: flex-start;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    h2 {
+      font-size: 1.7rem;
+    }
+
+    .sub-text {
+      font-size: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+    }
+  }
 }

@@ -109,3 +109,71 @@
     transform: translateX(-50%);
   }
 }
+
+@media screen and (max-width: 790px) {
+  .navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100%;
+  }
+
+  .nav-action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .desktop-menu,
+  .nav-action .btn {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .logo span {
+    width: 2.5rem;
+    margin-right: 0.2rem;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    top: 14vh;
+    left: 50%;
+    transform: translateX(-50%) translateY(-150%);
+    background: rgba(var(--surface-clr), 0.3);
+    backdrop-filter: blur(20px);
+    border: 0.1rem solid rgba(123, 123, 123, 0.2);
+    width: 20rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    z-index: 99;
+    transition:
+      transform 0.4s ease-in-out,
+      opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mobile-menu.mobile-menu-active {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

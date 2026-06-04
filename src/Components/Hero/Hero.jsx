@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="hero-content">
           <span className="sub-text">Hello There!</span>
           <h1>
-            <span className="green-text">I'm QJ Animesh,</span>
+            <span className="green-text">I'm AG Animesh,</span>
             <br />
             Web Developer based in UAE.
           </h1>

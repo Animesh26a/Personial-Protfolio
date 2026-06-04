@@ -1,4 +1,4 @@
-.project-image,
+/* .project-image,
 .project-content {
   flex: 1;
   flex-basis: 300px;
@@ -8,13 +8,6 @@
   overflow: hidden;
 }
 
-/* new line */
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 .rotate {
   transform: rotate(-45deg);
   transition: 0.3s ease-in-out;
@@ -52,5 +45,110 @@ h3 {
   }
   .gap-5 {
     gap: 2rem;
+  }
+} */
+
+
+.project-image,
+.project-content {
+  flex: 1;
+  flex-basis: 300px;
+}
+
+.project-image {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* new line */
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rotate {
+  transform: rotate(-45deg);
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover .rotate {
+  transform: rotate(0);
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--text-primary-clr);
+}
+
+/* ডেক্সটপের জন্য অল্টারনেট লেআউট */
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.list {
+  padding: 0.8rem 2rem;
+  background: var(--accent-clr);
+  color: var(--fix-clr);
+  border-radius: 100vw;
+  white-space: nowrap;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* =========================================
+   Responsive Media Queries
+========================================= */
+
+@media screen and (max-width: 790px) {
+  .project,
+  .project:nth-child(even) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project-image,
+  .project-content {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .project-image img {
+    height: 250px;
+  }
+
+  .list {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .project-content ul.flex {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  .gap-5 {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-image img {
+    height: 200px;
   }
 }

@@ -111,10 +111,10 @@ var sliderSettings = {
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint:  790,
+      breakpoint: 790,
       settings: {
-        slidersToShow:1,
-      }
-    }
-  ]
+        slidesToShow: 1,
+      },
+    },
+  ],
 };

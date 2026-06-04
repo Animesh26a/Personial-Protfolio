@@ -1,4 +1,4 @@
-h2 {
+/* h2 {
   font-size: 2.8rem;
   line-height: 100%;
   margin-top: 2.5rem;
@@ -80,4 +80,185 @@ h4 {
 }
 .border-btm {
   border-bottom: 0.1rem solid rgba(123, 123, 123, 0.2);
+} */
+
+/* =========================================
+   Base Styles (Desktop First)
+========================================= */
+h2 {
+  font-size: 2.8rem;
+  line-height: 100%;
+  margin-top: 2.5rem;
+  color: var(--text-primary-clr);
+  text-transform: capitalize;
+}
+
+.overlay-text {
+  position: relative;
+}
+
+.overlay-text::before {
+  content: attr(datatype);
+  position: absolute;
+  top: -70%;
+  left: -10%;
+  font-size: 6rem;
+  color: var(--text-primary-clr);
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: -1;
+  opacity: 0.08;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.m-block-1 {
+  margin-block: 1rem;
+}
+
+.border-btm {
+  border-bottom: 0.1rem solid rgba(123, 123, 123, 0.2);
+}
+
+.stretch {
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 1.5rem;
+  background: var(--surface-clr);
+  border: 0.1rem solid rgba(123, 123, 123, 0.2);
+  border-radius: 1rem;
+  flex: 1;
+  flex-basis: 300px;
+}
+
+.design {
+  position: relative;
+}
+
+.design::before {
+  content: "";
+  position: absolute;
+  background: var(--accent-clr);
+  inset: 2rem 0 7rem -0.6rem;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+h4 {
+  font-size: 1.7rem;
+  color: var(--text-primary-clr);
+}
+
+.service-icon {
+  width: 4rem;
+  aspect-ratio: 1;
+  font-size: 1.8rem;
+  color: var(--text-primary-clr);
+  background: var(--background-clr);
+  border: 0.1rem solid rgba(123, 123, 123, 0.2);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vw;
+}
+
+.hide-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--text-secondary-clr, #777);
+  line-height: 1.5;
+}
+
+.arrow {
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-primary-clr);
+}
+
+.link:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* =========================================
+   Responsive Media Queries
+========================================= */
+
+/* --- Tablet / Small Laptop (Max-width: 992px) --- */
+@media screen and (max-width: 992px) {
+  .overlay-text::before {
+    font-size: 5.5rem;
+    top: -50%;
+    left: 0;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+}
+
+/* --- Standard Mobile (Max-width: 768px) --- */
+@media screen and (max-width: 768px) {
+  .flex.between {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .self-end {
+    align-self: flex-start;
+  }
+
+  .mt-5 {
+    margin-top: 3rem;
+  }
+
+  .overlay-text::before {
+    font-size: 4.5rem;
+    top: -40%;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+  }
+}
+
+/* --- Small Mobile (Max-width: 480px) --- */
+@media screen and (max-width: 480px) {
+  .card {
+    flex-basis: 100%;
+  }
+
+  .design::before {
+    inset: 1.5rem 0 5rem -0.4rem;
+  }
+
+  .overlay-text::before {
+    font-size: 3.8rem;
+    top: -30%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
 }

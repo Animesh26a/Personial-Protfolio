@@ -1,4 +1,4 @@
-.about-image,
+/* .about-image,
 .about-content {
   flex: 1;
   flex-basis: 300px;
@@ -13,4 +13,79 @@ h6 {
 }
 .gap-5 {
   gap: 5rem;
+} */
+
+/* আপনার দেওয়া মূল কোড */
+/* --- Base Styles --- */
+.about-image,
+.about-content {
+  flex: 1;
+  flex-basis: 300px;
+}
+
+h6 {
+  font-size: 2rem;
+  color: var(--accent-clr);
+  text-align: center;
+}
+
+.m-block-3 {
+  margin-block: 3rem;
+}
+
+.gap-5 {
+  gap: 5rem;
+}
+
+/* =========================================
+   Responsive Media Queries
+========================================= */
+
+/* --- Tablet (Max-width: 992px) --- */
+@media screen and (max-width: 992px) {
+  .gap-5 {
+    gap: 3rem;
+  }
+}
+
+/* --- Mobile (Max-width: 768px) --- */
+@media screen and (max-width: 768px) {
+  .flex.gap-5 {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .about-image,
+  .about-content {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .m-block-3 {
+    margin-block: 2rem;
+  }
+
+  h6 {
+    font-size: 1.8rem;
+  }
+
+  .about-content .flex.gap-2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* --- Small Mobile (Max-width: 480px) --- */
+@media screen and (max-width: 480px) {
+  h6 {
+    font-size: 1.5rem;
+  }
+  .gap-5 {
+    gap: 1.5rem;
+  }
 }

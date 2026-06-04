@@ -22,7 +22,7 @@ const Footer = () => {
             Hire Me Now
           </a>
         </div>
-        <div className="p-block-7 flex flex-start gap-4">
+        <div className="p-block-7 flex flex-start flex-wrap gap-4">
           <div className="footer-wrapper">
             <Link to="/" className="logo">
               <span>AG</span>Animesh
