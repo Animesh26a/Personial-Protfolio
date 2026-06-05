@@ -48,7 +48,6 @@ h3 {
   }
 } */
 
-
 .project-image,
 .project-content {
   flex: 1;
@@ -82,7 +81,6 @@ h3 {
   color: var(--text-primary-clr);
 }
 
-/* ডেক্সটপের জন্য অল্টারনেট লেআউট */
 .project:nth-child(even) {
   flex-direction: row-reverse;
 }

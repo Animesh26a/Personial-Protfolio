@@ -51,6 +51,7 @@ const Testimonial = () => {
             <span className="green-text">Speaks To My Results</span>
           </h2>
         </div>
+        
         {SliderComponent ? (
           <SliderComponent {...sliderSettings} className="mt-5">
             {renderTestimonialData}
